@@ -13,6 +13,12 @@ jobs:
       - uses: actions/setup-python@v5
         with: {python-version: '3.11'}
       - run: pip install pandas openpyxl
+      - name: Debug - list files
+        run: |
+          pwd
+          ls -la
+          ls -la data/ || echo "NO DATA FOLDER"
+          ls -la data/Stock_Items.xlsx || echo "FILE NOT FOUND"
       - run: python scripts/build_site.py
         env:
           GITHUB_REPOSITORY_OWNER: ${{ github.repository_owner }}

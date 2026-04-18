@@ -1,3 +1,2 @@
 User-agent: *
 Allow: /
-Sitemap: https://victorayala-stack.github.io/inventory-copilot/sitemap.xml
